@@ -10,15 +10,21 @@ const PORT = 5000;
 //middleware
 app.use("/asserts", express.static(path.resolve(__dirname, "public")));
 
+//View folder is where our template engine files will sit
+app.set("views", path.resolve(__dirname, "view"));
+
+//Setting Template Engine to Pug
+app.set("view engine", "pug");
+
 //route
 app.get("/", function(req, res) {
   return res.sendFile(path.resolve(__dirname, "index.html"));
 });
 
 app.get("/person/:name", function(req, res) {
-  console.log(req.params);
-  console.log(req.query);
-  return res.send(`<h1>Hi, ${req.params.name}</h1>`);
+  // console.log(req.params);
+  // console.log(req.query);
+  return res.render("person", { name: req.params.name });
 });
 
 //Make the server to go live
