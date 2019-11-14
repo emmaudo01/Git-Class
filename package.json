@@ -1,0 +1,25 @@
+{
+  "name": "git-class",
+  "version": "1.0.0",
+  "description": "A job connect built with express, mongoDB anf pug\u001b[D\u001b[D\u001b[D\u001b[d\u001b[C\u001b[C\u001b[C\u001b[C\u001b[",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongodb",
+    "express",
+    "nodejs",
+    "pug"
+  ],
+  "author": "Emmanuel Udo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
